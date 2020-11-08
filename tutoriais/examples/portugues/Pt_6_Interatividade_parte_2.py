@@ -24,14 +24,16 @@ def exemplo_interatividade_parte_2():
 
     filter_rows_aux_class = filter_rows(sample_df=df)
 
-    row_unique_values = filter_rows_aux_class.return_unique_values_of_column("Role")
+    row_unique_values = filter_rows_aux_class.return_unique_values_of_column(
+        "Role")
 
     selected_row_value = st.selectbox(
         "Selecione o valor desejado para a coluna Role",
         row_unique_values
     )  # tenta trocar esse `st.selectbox()` por um `st.sidebar.selectbox()`
 
-    st.markdown(f"O valor selecionado é: `{selected_row_value}`, que tem esse tipo: `{type(selected_row_value)}`")
+    st.markdown(
+        f"O valor selecionado é: `{selected_row_value}`, que tem esse tipo: `{type(selected_row_value)}`")
 
     st.markdown("""
         **Abaixo vemos 2 dataframes:**

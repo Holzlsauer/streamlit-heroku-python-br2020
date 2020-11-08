@@ -19,9 +19,10 @@ def exemplo_interatividade_parte_1():
     if st.button('Aperte esse botão'):
         st.write("_Não aconteceu nada! (ou aconteceu?)_")
 
-    st.markdown("**Ou criar uma checkbox:**")  # Tente botar essa linha de código dentro do if ali de cima!
-    st.checkbox("Posso adicionar qualquer texto aqui")  # Tenta trocar esse texto
-
+    # Tente botar essa linha de código dentro do if ali de cima!
+    st.markdown("**Ou criar uma checkbox:**")
+    # Tenta trocar esse texto
+    st.checkbox("Posso adicionar qualquer texto aqui")
 
     st.markdown("**Ou um slider!!!**")
     st.slider(
@@ -35,7 +36,8 @@ def exemplo_interatividade_parte_1():
     """)
     if st.button('Texts Example'):
         st.write("_Perceba que esse texto abaixo é o do módulo_ `1.Textos - parte 1`")
-        exemplo_textos_parte_1()  # Chamo aqui um método desse .py ou qualquer outro, desde que feito o import.
+        # Chamo aqui um método desse .py ou qualquer outro, desde que feito o import.
+        exemplo_textos_parte_1()
 
     if st.button('Dataframes Example'):
         st.write("_E esse é do módulo_ `3.Dataframes`")
@@ -92,7 +94,8 @@ def exemplo_interatividade_parte_1():
                     Isso porque, depois de clicar em qualquer outra coisa, como um slider (ou checkbox ou botão),
                     o botão será 'desselecionado', tornando seu valor bool = False :(
                 """)
-                slider_return = st.slider(label="Slider secreto", min_value=0, max_value=10)
+                slider_return = st.slider(
+                    label="Slider secreto", min_value=0, max_value=10)
 
     st.write("____________________________________________________")
 

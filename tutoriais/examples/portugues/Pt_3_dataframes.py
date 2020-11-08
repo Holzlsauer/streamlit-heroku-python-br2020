@@ -33,8 +33,10 @@ def exemplo_dataframes():
         Vamos usar o mesmo método de antes, mas passando agora uma lista no argumento,
         pra ver o resultado!
     """)
-    st.dataframe(simple_list())  # Isso acontece porque uma lista também é DF de apenas 1 coluna (sem o nome da coluna)
-    st.write(f"\n\n Outra representação de lista, passando ela no argumento do `st.write`: {simple_list()}")
+    st.dataframe(simple_list(
+    ))  # Isso acontece porque uma lista também é DF de apenas 1 coluna (sem o nome da coluna)
+    st.write(
+        f"\n\n Outra representação de lista, passando ela no argumento do `st.write`: {simple_list()}")
 
     st.markdown("""
         ### Fazendo operações no objeto: ###
@@ -49,11 +51,13 @@ def exemplo_dataframes():
         Vamos começar removendo do dataframe!
         """)
 
-    new_df = remove_df_or_list_last_row(simple_df())  # Note que criamos uma nova variável pra armazenar o resultado da operação!
+    # Note que criamos uma nova variável pra armazenar o resultado da operação!
+    new_df = remove_df_or_list_last_row(simple_df())
     st.dataframe(new_df)
 
     st.markdown("Agora para a lista!:")
-    new_list = remove_df_or_list_last_row(simple_list())  # Aqui também, nova variável
+    new_list = remove_df_or_list_last_row(
+        simple_list())  # Aqui também, nova variável
     st.dataframe(new_list)
 
     st.markdown("""

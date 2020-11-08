@@ -12,8 +12,8 @@ def exemplo_textos_parte_1():
 
     st.write("\n\n")
 
-    my_name = "Arthur"  # Troque seu nome aqui
-    my_age = 24  # E sua idade
+    my_name = "Holzlsauer"  # Troque seu nome aqui
+    my_age = 27  # E sua idade
 
     st.write("E também é possível usar string format!! \n")
     st.write(f"Meu nome é: {my_name}! Eu possuo {my_age} anos!")
@@ -26,6 +26,7 @@ def exemplo_textos_parte_1():
 
     # Tente escrever alguma coisa a mais nesse código, talvez criar uma variável da sua cidade e printar ela
     # usando o `st.write`
+    st.write("Streamlite ftw")
 
 
 if __name__ == '__main__':

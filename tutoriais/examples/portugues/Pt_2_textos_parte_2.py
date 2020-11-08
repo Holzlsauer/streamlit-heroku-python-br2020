@@ -29,6 +29,8 @@ def exemplo_textos_parte_2():
         E outros objetos?
         """)
 
+    st.title("Dividir para conquistar")
+
 
 if __name__ == '__main__':
     exemplo_textos_parte_2()

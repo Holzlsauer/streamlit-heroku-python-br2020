@@ -30,7 +30,8 @@ def exemplo_plots():
 
     st.dataframe(df)
 
-    simple_bar_chart = CreatePlot(sample_df=df).categorical_count_bar_plot("Role")
+    simple_bar_chart = CreatePlot(
+        sample_df=df).categorical_count_bar_plot("Role")
     st.plotly_chart(simple_bar_chart, use_container_width=True)
 
     st.markdown("""
@@ -54,8 +55,11 @@ def exemplo_plots():
         columns=['a', 'b', 'c']
     )
 
-    st.area_chart(chart_data)  # Troque esse area_chart por um bar_chart
+    if st.button("Barras"):
+        st.bar_chart(chart_data)  # Troque esse area_chart por um bar_chart
 
+    if st.button("Área"):
+        st.area_chart(chart_data)
     # Tente criar um selectbox, pra escolha de gráfico. Associe ele a uma variável, e aí crie um if
     # para dependendo do valor dessa variável, ele chama um gráfico (por exemplo bar_chart e area_chart)
 
